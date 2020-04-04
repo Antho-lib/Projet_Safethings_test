@@ -69,12 +69,12 @@ else {
 
 			<?php
 			if(!empty($errorMessage)){
-			    include('error.php');
-			}
-			if(!empty($_SESSION['message'])){
-			    include('message.php');
-			    unset($_SESSION['message']);
-			}
+				    include('error.php');
+				}
+				if(!empty($_SESSION['message'])){
+				    include('message.php');
+				    unset($_SESSION['message']);
+				}
 			?>
 
 			<div id="banvert">
