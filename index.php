@@ -1,7 +1,7 @@
 <?php
 session_start();
-define('ROOT_PATH', "C:/xampp/www/monprojet/Projet_Safethings/"); //Racine du projet
-$request = str_replace(ROOT_PATH, "", $_SERVER['REQUEST_URI']);
+define('ROOT_PATH', "/"); //Racine du projet
+$request = preg_replace("/".preg_quote(ROOT_PATH, '/')."/", "", $_SERVER['REQUEST_URI'], 1);
 $request = parse_url($request, PHP_URL_PATH); //Parser pour ne pas garder les GET
 $segments = array_filter(explode('/', $request));
 if (!count($segments) or $segments[0] == 'index'){
