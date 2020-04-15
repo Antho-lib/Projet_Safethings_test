@@ -1,9 +1,8 @@
-<?php
-session_start();
-$titre =  "<h2>Safethings</h2>";
-$contenu = "Protections sanitaires";
+<?php  ob_start() ?>
 
-$categories = "	<div id=\"presentation\">
+
+
+
 
     <div class=\"possibilites\">
       <img src=\"img/fond/ffp3.jpg\" alt=\"Configurations\" class=\"images\">
@@ -28,7 +27,11 @@ $categories = "	<div id=\"presentation\">
       </div>
     </div>
 
-  </div>";?>
+
 <?php
-include('template.php');
-?>
+$titre =  "<h2>Safethings</h2>";
+$contenu =ob_get_clean();
+
+include 'includes/template.php' ;
+
+ ?>
