@@ -1,10 +1,9 @@
 <?php  ob_start() ?>
 
 
+<?php
 
-
-
-    <div class=\"possibilites\">
+$categories= " <div class=\"possibilites\">
       <img src=\"img/fond/ffp3.jpg\" alt=\"Configurations\" class=\"images\">
       <h3>Protections du visage</h3>
       <div class=\"middle\">
@@ -25,12 +24,12 @@
       <div class=\"middle\">
       <div class=\"text\"><a href=\"\">Voir</a></div>
       </div>
-    </div>
+    </div>";
 
 
-<?php
-$titre =  "<h2>Safethings</h2>";
-$contenu =ob_get_clean();
+
+$titre = "<h2>Safethings</h2>";
+$contenu=ob_get_clean();
 
 include 'includes/template.php' ;
 

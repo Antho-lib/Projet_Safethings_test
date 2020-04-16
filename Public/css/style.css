@@ -124,9 +124,9 @@ padding-top: 2%;
 }
 .possibilites{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
-	height: 450px;
+	height: 250px;
 	margin: 0 30px;
 
 	position: relative;

@@ -17,9 +17,9 @@
 
 
 
-				<li><a href="#">Acceuil</a></li>
-				<li><a href="devis.html">Produits</a></li>
-				<li><a href="#">Infos</a></li>
+				<li><a href="<?=ROOT_PATH?>">Acceuil</a></li>
+				<li><a href="<?=ROOT_PATH?>articles">Produits</a></li>
+				<li><a href="<?=ROOT_PATH?>">Infos</a></li>
 				<li><a href="#contactanc">Contacts</a></li>
 
 
@@ -39,8 +39,8 @@
 			<div id="intro">
 				<img src="img/fond/fnd3.jpg" alt="Banniere">
 				<div id="titre">
-					<?php echo $titre; ?>
-					<?php echo $contenu; ?>
+					<?php echo $titre ; ?>
+					<?php echo $contenu ; ?>
 
 
 <?php
@@ -55,8 +55,8 @@ if(!empty($_SESSION['login']))
 
 <?php
 if(empty($_SESSION['login'])){
-    echo '<a href="signup.php" class="favorite styled" type="button" >S\'inscrire</a>';
-    echo '<a href="login.php"  class="favorite styled"  type="button" >Se connecter</a>';
+    echo '<a href="'.ROOT_PATH.'signup" class="favorite styled" type="button" >S\'inscrire</a>';
+    echo '<a href="'.ROOT_PATH.'signin"  class="favorite styled"  type="button" >Se connecter</a>';
 }
 else {
     echo '<a href="account.php" class="favorite styled" type="button" >Mon compte</a>';
