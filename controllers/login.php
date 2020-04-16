@@ -1,5 +1,5 @@
 <?php
-require 'models/users.php';
+require '../models/users.php';
 
 function isValidUser($login, $password) {
     $user = getUserByLogin($login);

@@ -56,7 +56,7 @@ if(!empty($_SESSION['login']))
 <?php
 if(empty($_SESSION['login'])){
     echo '<a href="'.ROOT_PATH.'signup" class="favorite styled" type="button" >S\'inscrire</a>';
-    echo '<a href="'.ROOT_PATH.'signin"  class="favorite styled"  type="button" >Se connecter</a>';
+    echo '<a href="'.ROOT_PATH.'login"  class="favorite styled"  type="button" >Se connecter</a>';
 }
 else {
     echo '<a href="'.ROOT_PATH.'account" class="favorite styled" type="button" >Mon compte</a>';
