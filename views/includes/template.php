@@ -46,7 +46,7 @@
 <?php
 if(!empty($_SESSION['login']))
 {
-			echo'<a href="admin.php" class="favorite styled" type="button" >Menu d\'administration</a>';
+			echo'<a href="'.ROOT_PATH.'admin" class="favorite styled" type="button" >Menu d\'administration</a>';
 
 }
 ?>
@@ -59,8 +59,8 @@ if(empty($_SESSION['login'])){
     echo '<a href="'.ROOT_PATH.'signin"  class="favorite styled"  type="button" >Se connecter</a>';
 }
 else {
-    echo '<a href="account.php" class="favorite styled" type="button" >Mon compte</a>';
-    echo '<a href="logout.php" class="favorite styled"  type="button" >Se déconnecter</a>';
+    echo '<a href="'.ROOT_PATH.'account" class="favorite styled" type="button" >Mon compte</a>';
+    echo '<a href="'.ROOT_PATH.'logout" class="favorite styled"  type="button" >Se déconnecter</a>';
 }
 ?>
 

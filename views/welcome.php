@@ -3,7 +3,10 @@
 
 <?php
 
-$categories= " <div class=\"possibilites\">
+$categories= " <div class=\"title_at_w\">
+              <h2>Voici ce que nous proposons</h2>
+              </div>
+<div class=\"possibilites\">
       <img src=\"img/fond/ffp3.jpg\" alt=\"Configurations\" class=\"images\">
       <h3>Protections du visage</h3>
       <div class=\"middle\">
