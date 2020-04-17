@@ -14,7 +14,7 @@
     <?php endforeach?>
     </div>
 <?php
-$title="Les articles";
+$titre="Les articles";
 $contenu = ob_get_clean();
 include 'includes/template.php';
 ?>

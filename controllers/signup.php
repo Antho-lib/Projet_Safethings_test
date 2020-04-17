@@ -1,10 +1,8 @@
 <?php
 require_once 'models/user.php';
 
-if(!empty($_SESSION['login'])){
-    header("Location: index.php");
-    exit();
-}
+
+
 if(!empty($_POST)) {
     if(!empty($_POST['login']) && !empty($_POST['password']) && !empty($_POST['email']) && !empty($_POST['confirm_password']))
     {
@@ -39,7 +37,7 @@ if(!empty($_POST)) {
                 $reponse->closeCursor(); // Termine le traitement de la requête
                 $_SESSION['login'] = $_POST['login'];
                 $_SESSION['message'] = "Bienvenue ".$_POST['login'];
-                header('Location: index.php');
+                header("Location:".ROOT_PATH);
                 exit();
             }
         }

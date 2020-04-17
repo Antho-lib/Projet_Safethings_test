@@ -1,5 +1,5 @@
 <?php
-require 'models/user.php';
+require_once 'models/user.php';
 
 function isValidUser($login, $password) {
     $user = getUserByLogin($login);
@@ -29,13 +29,13 @@ if(!empty($_POST)) {
         else
         {
             //Authentification NOK
-            $_SESSION['error'] = "Mauvais login/password";
+            $errorMessage = "Mauvais login/password";
         }
     }
     else
     {
         //Ici on va prévenir l'utilisateur qu'il manque quelque chose
-        $_SESSION['error'] = "Tu as oublié d'encoder quelque chose...";
+        $errorMessage = "Tu as oublié d'encoder quelque chose...";
     }
 }
 include 'views/login.php';

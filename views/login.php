@@ -2,6 +2,9 @@
 
 
 <?php
+
+
+$titre = "Se connecter";
 $contenu = "<form action=\"login.php\" method=\"POST\">
     <div class=\"form-example\">
         <label for=\"idlogin\">Login</label>
@@ -13,8 +16,6 @@ $contenu = "<form action=\"login.php\" method=\"POST\">
     </div>
     <button class=\"subco\" type=\"submit\">Submit</button>
 </form>";
-
-$titre = "Se connecter";
 $categories = ob_get_clean();
 include ('includes/template.php');
 ?>

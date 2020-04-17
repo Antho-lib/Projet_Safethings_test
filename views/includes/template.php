@@ -59,7 +59,7 @@ if(empty($_SESSION['login'])){
     echo '<a href="'.ROOT_PATH.'login"  class="favorite styled"  type="button" >Se connecter</a>';
 }
 else {
-    echo '<a href="'.ROOT_PATH.'account" class="favorite styled" type="button" >Mon compte</a>';
+    echo '<a href="" class="favorite styled" type="button" >Mon compte</a>';
     echo '<a href="'.ROOT_PATH.'logout" class="favorite styled"  type="button" >Se déconnecter</a>';
 }
 ?>
