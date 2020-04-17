@@ -15,6 +15,6 @@ $contenu = "<form action=\"login.php\" method=\"POST\">
 </form>";
 
 $titre = "Se connecter";
-$categories = ob_get_clean()
-include 'includes/template.php';
+$categories = ob_get_clean();
+include ('includes/template.php');
 ?>

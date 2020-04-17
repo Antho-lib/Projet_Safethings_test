@@ -1,5 +1,5 @@
 <?php
-require_once 'models/users.php';
+require_once 'models/user.php';
 
 if(!empty($_SESSION['login'])){
     header("Location: index.php");
