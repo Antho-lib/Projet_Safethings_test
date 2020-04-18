@@ -1,5 +1,8 @@
 <?php ob_start() ?>
-<form action="signup.php" method="POST">
+<div id="titre_signup">
+  <p>Inscription</p>
+</div>
+<form  method="POST">
     <div class="form-example">
         <label for="idlogin">Login</label>
         <input type="text" class="form-example" id="idlogin" name="login">
@@ -19,9 +22,7 @@
     <button class="subco" type="submit">Submit</button>
 </form>
 <?php
-$titre = "S'inscrire";
-$contenu = ob_get_clean();
-$categories = ob_get_clean();
-$soustitre2 = ob_get_clean();
+$titre = ob_get_clean();
+$contenu = "<div id=\"adv_signup\"<h3></h3>";
 include("includes/template.php");
 ?>

@@ -25,7 +25,17 @@ h2{
 	font-size: 60px;
 	text-transform: uppercase;
 }
-
+#adv_log{
+	text-align: center;
+	margin: -150px;
+	font-size: 2.5em;
+	text-decoration: underline overline #FF3028;
+}
+#adv_signup{
+	text-align: center;
+	margin: -150px;
+	font-size: 2.5em;
+}
 #imgintro{
 
   margin-left: auto;
@@ -71,10 +81,10 @@ h2{
 
 	margin-left: auto;
     margin-right: auto;
-		background-size: contain;
-		background-repeat: no-repeat;
+		margin-top: auto;
+		background-color: #cbcbcb;
 		width: 100%;
-		height: 150px;
+		height: auto;
 }
 
 #presentation{
@@ -131,7 +141,6 @@ padding-top: 2%;
 	align-items: center;
 	height: 250px;
 	margin: 0 30px;
-
 	position: relative;
   width: 50%;
 }

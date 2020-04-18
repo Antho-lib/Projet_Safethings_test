@@ -24,6 +24,7 @@ if(!empty($_POST)) {
             $_SESSION['id'] = $user['id'];
             $_SESSION['message'] = "Bienvenue ".$user['login'];
             header("Location: ".ROOT_PATH);
+            
             exit();
         }
         else

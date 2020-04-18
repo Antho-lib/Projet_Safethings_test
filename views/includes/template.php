@@ -40,29 +40,7 @@
 				<img src="img/fond/fnd3.jpg" alt="Banniere">
 				<div id="titre">
 					<?php echo $titre ; ?>
-					<?php echo $contenu ; ?>
 
-
-<?php
-if(!empty($_SESSION['login']))
-{
-			echo'<a href="'.ROOT_PATH.'admin" class="favorite styled" type="button" >Menu d\'administration</a>';
-
-}
-?>
-
-
-
-<?php
-if(empty($_SESSION['login'])){
-    echo '<a href="'.ROOT_PATH.'signup" class="favorite styled" type="button" >S\'inscrire</a>';
-    echo '<a href="'.ROOT_PATH.'login"  class="favorite styled"  type="button" >Se connecter</a>';
-}
-else {
-    echo '<a href="" class="favorite styled" type="button" >Mon compte</a>';
-    echo '<a href="'.ROOT_PATH.'logout" class="favorite styled"  type="button" >Se déconnecter</a>';
-}
-?>
 
 				</div>
 			</div>
@@ -78,15 +56,13 @@ else {
 			?>
 
 			<div id="banvert">
-				<img src="img/fond/fndban2.jpg" alt="Banniere">
+				<?php echo $contenu ; ?>
 			</div>
-				<?php echo$categories; ?>
-
 
 
 
 			<div id="barresrouge">
-				<img src="img/fond/barres.png" alt="barres de séparation">
+
 			</div>
 
 
