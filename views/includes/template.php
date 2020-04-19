@@ -18,7 +18,7 @@
 
 
 				<li><a href="<?=ROOT_PATH?>">Acceuil</a></li>
-				<li><a href="<?=ROOT_PATH?>articles">Articles</a></li>
+				<li><a href="<?=ROOT_PATH?>article">Articles</a></li>
 				<li><a href="<?=ROOT_PATH?>">Infos</a></li>
 				<li><a href="#contactanc">Contacts</a></li>
 

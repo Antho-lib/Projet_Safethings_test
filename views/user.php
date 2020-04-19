@@ -15,7 +15,7 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email )
 
 ob_start()?>
 <div class="edit_style">
-
+<img src="<?php echo $grav_url; ?>" alt="" />
 
 <br>
 Identifiant: <?= $user['id']?>

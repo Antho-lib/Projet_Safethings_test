@@ -10,8 +10,6 @@
     <dt>Description</dt>
     <dd><?= $article['description']?></dd>
 
-    <dt>Origine</dt>
-    <dd><?= $article['origine']?></dd>
 
     <dt>Prix</dt>
     <dd><?= $article['prix']?> €</dd>
