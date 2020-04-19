@@ -1,5 +1,5 @@
 <?php
-require_once 'models/user.php';
+require_once 'models/users.php';
 
 function isValidUser($login, $password) {
     $user = getUserByLogin($login);
@@ -24,7 +24,7 @@ if(!empty($_POST)) {
             $_SESSION['id'] = $user['id'];
             $_SESSION['message'] = "Bienvenue ".$user['login'];
             header("Location: ".ROOT_PATH);
-            
+
             exit();
         }
         else

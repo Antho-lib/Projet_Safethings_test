@@ -8,7 +8,7 @@
 
               <h5><?=$article['prix']?></h5>
               <p><?=$article['description']?></p>
-              <a href="<?=ROOT_PATH.'article/'.$article['nom']?>">Voir le détail</a>
+              <a href="<?=ROOT_PATH.'article'.$article['nom']?>">Voir le détail</a>
 
 
     <?php endforeach?>

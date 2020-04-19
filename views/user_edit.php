@@ -1,7 +1,7 @@
 <?php
 ob_start()
 ?>
-<form action="edit.php" method="POST">
+<form method="POST">
     <div class="form-group">
         <label for="idlogin">Login</label>
         <input type="text" class="form-control" id="idlogin" name="login" value="<?= $user['login']?>" readonly>
@@ -21,9 +21,7 @@ ob_start()
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <?php
-$title = "Editer";
+$titre = "Editer";
 $contenu = ob_get_clean();
-$categories = ob_get_clean();
-$soustitre2 = ob_get_clean();
 include 'includes/template.php';
 ?>

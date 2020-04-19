@@ -150,7 +150,10 @@ padding-top: 2%;
 	color: #000000;
 	text-transform: uppercase;
 }
+.edit_style{
+	text-align: center;
 
+}
 .possibilites p{
 	margin: 0;
 	height: 50px;

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="">
-		<link rel="stylesheet" href="Public/css/style.css" media="all">
+		<link rel="stylesheet" href="<?=ROOT_PATH?>Public/css/style.css" media="all">
 		<title>Safethings </title>
 	</head>
 	<body>
@@ -18,7 +18,7 @@
 
 
 				<li><a href="<?=ROOT_PATH?>">Acceuil</a></li>
-				<li><a href="<?=ROOT_PATH?>articles">Produits</a></li>
+				<li><a href="<?=ROOT_PATH?>articles">Articles</a></li>
 				<li><a href="<?=ROOT_PATH?>">Infos</a></li>
 				<li><a href="#contactanc">Contacts</a></li>
 
@@ -37,7 +37,7 @@
 
 		<main>
 			<div id="intro">
-				<img src="img/fond/fnd3.jpg" alt="Banniere">
+				<img src="<?=ROOT_PATH?>img/fond/fnd3.jpg" alt="Banniere">
 				<div id="titre">
 					<?php echo $titre ; ?>
 
@@ -78,7 +78,7 @@
 
 
 			<div id="localisation">
-				<img src="img/fond/fnd3.jpg" alt="Banniere localisation">
+				<img src="<?=ROOT_PATH?>img/fond/fnd3.jpg" alt="Banniere localisation">
 				<div id="titrelocalisation">
 					<h2>Livraison partout dans le monde</h2>
 					<h3>Passez vos commandes 24h/24 7j/7</h3>
@@ -89,7 +89,7 @@
 
 
 			<div id="barresrougebas">
-				<img src="img/fond/barres.png" alt="barres de séparation" id="barresbas">
+				<img src="<?=ROOT_PATH?>img/fond/barres.png" alt="barres de séparation" id="barresbas">
 			</div>
 
 
