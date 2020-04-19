@@ -41,14 +41,13 @@
 				<div id="titre">
 					<?php echo $titre ; ?>
 
-					<?php if(empty($_SESSION['login'])):?>
+					<?php if(empty($_SESSION['id'])):?>
 					    	<a href="<?=ROOT_PATH?>signup" class="favorite styled" type="button" >S'inscrire</a>
 					    	<a href="<?=ROOT_PATH?>login"  class="favorite styled"  type="button" >Se connecter</a>
 
 									<?php else:?>
-					  					<a href="" class="favorite styled" type="button" >Mon compte</a>;
-					  					<a href="<?=ROOT_PATH?>logout" class="favorite styled"  type="button" >Se déconnecter</a>;
-											<a href="<?=ROOT_PATH?>admin" class="favorite styled" type="button" >Menu d\'administration</a>;
+					  					<a href="<?=ROOT_PATH?>user" class="favorite styled" type="button" >Mon compte</a>
+					  					<a href="<?=ROOT_PATH?>logout" class="favorite styled"  type="button" >Se déconnecter</a>
 					<?php endif?>
 
 
