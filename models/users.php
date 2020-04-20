@@ -30,5 +30,11 @@ function setUser($id, $login, $email, $password) {
     $reponse->execute([':id' => $id, ':email' => $email, ':password' => $password, ':login' => $login]);
     $reponse->closeCursor(); // Termine le traitement de la requête
 }
+function deleteUser($username){
+
+	$response = getBdd()->prepare('DELETE FROM `user` WHERE username = :username');
+	$response->execute($array);
+	$response->closeCursor();
+}
 
 ?>

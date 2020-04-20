@@ -3,7 +3,7 @@ function getDB() {
     try
     {
         //PDO: PHP Data Objects
-        $bdd = new PDO('mysql:host=localhost;dbname=acheteur;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $bdd = new PDO('mysql:host=localhost;dbname=projet;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         return $bdd;
     }
     catch (Exception $e)

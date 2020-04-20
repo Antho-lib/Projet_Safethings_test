@@ -40,6 +40,19 @@
 				<img src="<?=ROOT_PATH?>img/fond/fnd3.jpg" alt="Banniere">
 				<div id="titre">
 					<?php echo $titre ; ?>
+					<?php if(isset($_SESSION['id']) && $_SESSION['id_role'] == "admin"):?>
+
+					<li class="nav-item submenu dropdown">
+					<a href="#"   role="button" aria-haspopup="true"
+					aria-expanded="false">Administration</a>
+					<ul class="dropdown-menu">
+					<li class="nav-item"><a  href="<?=ROOT_PATH?>user_edit">Gestion membres</a></li>
+					<li class="nav-item"><a  href="<?=ROOT_PATH?>edit_books">Gestion commandes</a></li>
+					<li class="nav-item"><a  href="<?=ROOT_PATH?>edit_articles">Gestion shop</a></li>
+					</ul>
+					</li>
+				<?php endif?>
+
 
 					<?php if(empty($_SESSION['id'])):?>
 					    	<a href="<?=ROOT_PATH?>signup" class="favorite styled" type="button" >S'inscrire</a>

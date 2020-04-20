@@ -19,9 +19,18 @@ ob_start()
         <input type="password" class="form-control" id="idconfirmpassword" name="confirm_password">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    <?php foreach($users as $user):?>
+		<tr>
+		<?php foreach($user as $row):?>
+				<td><?=$row?></th>
+		<?php endforeach?>
+		<td><a href="<?=ROOT_PATH?>user_edit?modify<?=$user['username']?>">Modifier</a></td>
+		<td><a href="<?=ROOT_PATH?>user_edit?delete=<?=$user['username']?>">Supprimer</a></td>
+		</tr>
+	<?php endforeach?>
 </form>
 <?php
-$titre = "Editer";
+$titre = "Gestion des membres";
 $contenu = ob_get_clean();
 include 'includes/template.php';
 ?>

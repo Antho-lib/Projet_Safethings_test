@@ -1,35 +1,28 @@
 <?php
 require 'models/users.php';
-if(empty($_SESSION['id'])){
-    header("Location: ".ROOT_PATH);
-    exit();
-}
-if(REQ_TYPE_ID){
-    $user = getUserByLogin(REQ_TYPE_ID);
-}
-else {
-    $user = getUserById($_SESSION['id']);
-    header("Location: ".ROOT_PATH."user/".$user['login']);
-    exit();
-}
-if(!$user){
-    http_response_code(404);
-    include 'views/404.php';
-    exit();
-}
 
-if (!empty($_POST) && !empty($_POST['login']) && !empty($_POST['email'])){
-    if($_POST['password'] != $_POST['confirm_password'])
-    {
-        $_SESSION['error'] = "Votre mot de passe et votre mot de passe de confirmation ne correspondent pas...";
-    }
-    else
-    {
-        setUser($user['id'], $_POST['login'], $_POST['email'], $_POST['password']);
-        $_SESSION['message'] = 'L\'utilisateur '.$user['login'].' a bien été mis à jour';
-        header("Location: ".ROOT_PATH);
-        exit();
-    }
+$users = getAllUsers();
+
+// On transforme l'id_role de l'user pour qu'il soit plus explicite
+// Je ne dois pas vérifier qu'un role_id, c'est un champ not nul en db et une personne au moins doit être enregistrée pour avoir accès au menu edit_users
+foreach($users as &$user){
+	if($user['role_id']==1){
+		$user['role_id']="Administrateur";
+	}else{
+		$user['role_id']="Utilisateur";
+	}
+}
+unset($user);
+
+
+if(!empty($_GET['delete'])){
+	if($_SESSION['username']!= $_GET['delete']){
+		deleteUser($_GET['delete']);
+		header("Location: user_edit");
+		exit();
+	}else{
+		$errorMessage = "Vous ne pouvez pas supprimer votre propre compte";
+	}
 }
 include 'views/user_edit.php';
 ?>
