@@ -32,7 +32,7 @@ function setUser($id, $login, $email, $password) {
 }
 
 function getAllUsers(){
-	$response = getDB()->prepare('SELECT login,email from user');
+	$response = getDB()->prepare('SELECT* from user');
 	$response->execute();
 	$users = $response->fetchAll(PDO::FETCH_ASSOC);
 	$response->closeCursor();

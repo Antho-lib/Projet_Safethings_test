@@ -1,14 +1,16 @@
 <?php
 ob_start()
 ?>
+<?php print_r($users) ?>
+
 <form method="POST">
     <div class="form-group">
         <label for="idlogin">Login</label>
-        <input type="text" class="form-control" id="idlogin" name="login" value="<?= $user['login']?>" readonly>
+        <input type="text"   value="<?=$_SESSION['login']?>" readonly>
     </div>
     <div class="form-group">
         <label for="idemail">Email</label>
-        <input type="email" class="form-control" id="idemail" name="email" value="<?= $user['email']?>">
+        <input type="email"   value="<?= $_SESSION['email']?>">
     </div>
     <div class="form-group">
         <label for="idpassword">Password</label>
