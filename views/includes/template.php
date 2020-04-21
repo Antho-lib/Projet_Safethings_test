@@ -40,8 +40,9 @@
 				<img src="<?=ROOT_PATH?>img/fond/fnd3.jpg" alt="Banniere">
 				<div id="titre">
 					<?php echo $titre ; ?>
-					<?php if(isset($_SESSION['id']) && $_SESSION['id_role'] == "admin"):?>
-
+					<?php if(empty($_SESSION['id']) || $_SESSION['id_role']!=1):?>
+						<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+						<?php else:?>
 					<li class="nav-item submenu dropdown">
 					<a href="#"   role="button" aria-haspopup="true"
 					aria-expanded="false">Administration</a>
