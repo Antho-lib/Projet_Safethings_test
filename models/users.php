@@ -30,9 +30,17 @@ function setUser($id, $login, $email, $password) {
     $reponse->execute([':id' => $id, ':email' => $email, ':password' => $password, ':login' => $login]);
     $reponse->closeCursor(); // Termine le traitement de la requête
 }
+
+function getAllUsers(){
+	$response = getDB()->prepare('SELECT login,email from user');
+	$response->execute();
+	$users = $response->fetchAll(PDO::FETCH_ASSOC);
+	$response->closeCursor();
+	return $users;
+}
 function deleteUser($username){
 
-	$response = getBdd()->prepare('DELETE FROM `user` WHERE username = :username');
+	$response = getDB()->prepare('DELETE FROM `user` WHERE login = :login');
 	$response->execute($array);
 	$response->closeCursor();
 }

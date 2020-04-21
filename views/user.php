@@ -24,7 +24,7 @@ Login: <?= $user['login']?>
 <br>
 Email: <?= $user['email']?>
 <br>
-<a href="<?=ROOT_PATH?>user/<?= $user['login']?>/edit" class="bouton_edit">Editer</a>
+<a href="<?=ROOT_PATH?>user_edit" class="bouton_edit">Editer</a>
 </div>
 <?php
 $contenu = ob_get_clean();
