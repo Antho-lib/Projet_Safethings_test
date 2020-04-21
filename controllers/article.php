@@ -1,16 +1,4 @@
 <?php
-require 'models/articles.php';
-if (!REQ_TYPE_ID) {
-    $articles = getArticles();
-    include 'views/articles.php';
-} else {
-    $article = getArticle(REQ_TYPE_ID);
-    include 'views/article.php';
-}
-?>
-
-
-<?php
 require_once('models/articles.php');
 
 if(empty($_POST)){
@@ -34,7 +22,7 @@ $article = $articleTab[0]; //extraction du tableau
 		$description = $_POST['description'];
 	}
 	updateArticle($_GET['titre'], $titre, $prix, $description);
-	header("Location: edit_articles");
+	header("Location: articles_edit");
 	exit();
 
 }
