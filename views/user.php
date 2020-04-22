@@ -2,7 +2,7 @@
 
 $titre = "Mon compte";
 
-if($user['id'] != $_SESSION['id']) {
+if($usersolo['id'] == $_SESSION['id']) {
     $titre = "Utilisateur ".$user['login'];
 }
 
@@ -28,5 +28,5 @@ Email: <?= $user['email']?>
 </div>
 <?php
 $contenu = ob_get_clean();
-include 'includes/template.php';
+
 ?>

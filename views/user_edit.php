@@ -34,9 +34,15 @@
 					<?php foreach($user as $row):?>
 						<td><?=$row?></th>
 					<?php endforeach?>
+					<?php if(empty($_SESSION['id']) || $_SESSION['id_role']!=2):?>
 					<td><a href="<?=ROOT_PATH?>user_edit?modify<?=$user['login']?>">Modifier</a></td>
 					<td><a href="<?=ROOT_PATH?>user_edit?delete=<?=$user['login']?>">Supprimer</a></td>
 					</tr>
+
+				<?php else:include("views/user.php");?>
+
+
+						<?php endif?>
 				<?php endforeach?>
 			</table>
 		</div>

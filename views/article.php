@@ -27,9 +27,9 @@
 				<h4><?=$article['titre']?></h4>
 				<h5><?=$article['description']?></h5>
 				<h6>Categorie: <?=$article['titre']?></h6>
-				<?php if(!empty($_SESSION['id']) && $_SESSION['id_role'] == 2):?>
+				<?php if(!empty($_SESSION['id']) && $_SESSION['id_role'] == 1):?>
 				<div class="add-bag d-flex align-items-center">
-					<a class="add-btn" href="<?=ROOT_PATH?>panier?title=<?=$article['title']?>"><span class="lnr lnr-cross"></span></a>
+					<a class="add-btn" href="<?=ROOT_PATH?>panier?titre=<?=$article['titre']?>"><span class="lnr lnr-cross"></span></a>
 					<span class="add-text text-uppercase">Ajouter au panier</span>
 				</div>
 				</br></br>

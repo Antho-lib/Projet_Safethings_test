@@ -22,7 +22,27 @@ function getCats(){
 	$response->closeCursor();
 	return $catName;
 }
+function getArticleTitle($cat){
+	$response = getBdd()->prepare('SELECT categorie.nom_categorie FROM item  INNER JOIN categorie ON item.id_categorie = categorie.id_categorie GROUP BY item.id_categorie ');
+	$response->execute([':cat' => $cat]);
+	$subCat = array();
+	while ($donnees = $response->fetch()){
+		array_push($cat,$donnees['titre']);
+	}
+	$response->closeCursor();
+	return $cat;
+}
 
+function getArticlePrice($cat){
+	$response = getBdd()->prepare('');
+	$response->execute([':cat' => $cat]);
+	$subCat = array();
+	while ($donnees = $response->fetch()){
+		array_push($cat,$donnees['price']);
+	}
+	$response->closeCursor();
+	return $cat;
+}
 
 
 function getFullArticle($name){

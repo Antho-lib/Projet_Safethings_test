@@ -1,6 +1,10 @@
 <?php
 require 'models/users.php';
+if($_SESSION['id_role'] == 1){
+$usersolo=getUserById($id);
+}
 
+if($_SESSION['id_role'] == 2){
 $users = getAllUsers();
 
 // On transforme l'id_role de l'user pour qu'il soit plus explicite
@@ -23,6 +27,7 @@ if(!empty($_GET['delete'])){
 	}else{
 		$errorMessage = "Vous ne pouvez pas supprimer votre propre compte";
 	}
+ }
 }
 include 'views/user_edit.php';
 ?>
