@@ -3,7 +3,7 @@
     <?php foreach($articles as $article):?>
 
 
-              <?=$article['nom']?>
+              <?=$article['titre']?>
 
 
               <h5><?=$article['prix']?></h5>
