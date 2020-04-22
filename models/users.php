@@ -38,6 +38,7 @@ function getAllUsers(){
 	$response->closeCursor();
 	return $users;
 }
+
 function deleteUser($username){
 
 	$response = getDB()->prepare('DELETE FROM `user` WHERE login = :login');
