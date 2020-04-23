@@ -39,11 +39,13 @@
 					<td><a href="<?=ROOT_PATH?>user_edit?delete=<?=$user['login']?>">Supprimer</a></td>
 					</tr>
 
-				<?php else:include("views/user.php");?>
+
 
 
 						<?php endif?>
 				<?php endforeach?>
+
+				
 			</table>
 		</div>
 	</section>

@@ -2,7 +2,7 @@
 
 $titre = "Mon compte";
 
-if($usersolo['id'] == $_SESSION['id']) {
+if($user['id'] != $_SESSION['id']) {
     $titre = "Utilisateur ".$user['login'];
 }
 
@@ -14,8 +14,6 @@ $grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email )
 
 
 ob_start()?>
-<div class="edit_style">
-<img src="<?php echo $grav_url; ?>" alt="" />
 
 <br>
 Identifiant: <?= $user['id']?>
@@ -24,9 +22,8 @@ Login: <?= $user['login']?>
 <br>
 Email: <?= $user['email']?>
 <br>
-<a href="<?=ROOT_PATH?>user_edit" class="bouton_edit">Editer</a>
-</div>
+<a href="<?=ROOT_PATH?>single_user" class="bouton_edit">Editer</a>
 <?php
 $contenu = ob_get_clean();
-
+include 'includes/template.php';
 ?>

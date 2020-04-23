@@ -60,7 +60,11 @@
 					    	<a href="<?=ROOT_PATH?>login"  class="favorite styled"  type="button" >Se connecter</a>
 
 									<?php else:?>
-					  					<a href="<?=ROOT_PATH?>user_edit" class="favorite styled" type="button" >Mon compte</a>
+										<?php if($_SESSION['id_role']!=2):?>
+					  					<a href="<?=ROOT_PATH?>user_edit" class="favorite styled" type="button" >Administration</a>
+										<?php else:?>
+											<a href="<?=ROOT_PATH?>single_user" class="favorite styled" type="button" >Mon compte</a>
+											<?php endif?>
 					  					<a href="<?=ROOT_PATH?>logout" class="favorite styled"  type="button" >Se déconnecter</a>
 					<?php endif?>
 
