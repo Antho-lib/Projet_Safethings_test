@@ -1,6 +1,6 @@
 <?php ob_start() ?>
     <div class="cadre_photo">
-    <?php foreach($articles as $article):?>
+    <?php foreach($article as $articles):?>
 
 
               <?=$article['titre']?>
@@ -8,7 +8,8 @@
 
               <h5><?=$article['prix']?></h5>
               <p><?=$article['description']?></p>
-              <a href="<?=ROOT_PATH.'article/'.$article['nom']?>">Voir le détail</a>
+              <a href="<?=ROOT_PATH.'article/'.$article['titre']?>">Voir le détail</a>
+              
 
 
     <?php endforeach?>

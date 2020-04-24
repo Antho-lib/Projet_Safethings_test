@@ -37,7 +37,7 @@ for($cpt=0;$cpt<count($title);$cpt++){
 	$temptab = ['title' => $title[$cpt],
 	'prix' => $prix[$cpt],
 	'path' => $path[$cpt],
-	'categorie' => $category[$cpt],];
+	'categorie' => $categorie[$cpt],];
 	array_push($data,$temptab);
 }
 include 'views/shop.php';

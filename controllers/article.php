@@ -3,18 +3,18 @@ require_once('models/articles.php');
 
 if(empty($_POST)){
 $articleName = str_replace("-", " ", ARTICLE_REF);
-$articleTab = getFullArticle($articleName); // créé un tableau contenant un tableau avec les infos d'un article
+$articleTab =  getAllArticles(); // créé un tableau contenant un tableau avec les infos d'un article
 $article = $articleTab[0]; //extraction du tableau
 }else{
 	if(empty($_POST['titre'])){
-		$title = $_GET['titre'];
+		$titre = $_GET['titre'];
 	}else{
-		$title = $_POST['titre'];
+		$titre = $_POST['titre'];
 	}
 	if(empty($_POST['prix'])){
-		$price = $_GET['prix'];
+		$prix = $_GET['prix'];
 	}else{
-		$price = $_POST['prix'];
+		$prix = $_POST['prix'];
 	}
 	if(empty($_POST['description'])){
 		$description = $_GET['description'];
@@ -26,5 +26,5 @@ $article = $articleTab[0]; //extraction du tableau
 	exit();
 
 }
-include 'views/article.php';
+include 'views/articles.php';
 ?>
