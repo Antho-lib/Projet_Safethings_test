@@ -56,9 +56,9 @@ function getFullArticle($name){
 function getAllArticles(){
 	$response = getDB()->prepare('SELECT *  FROM item  INNER JOIN categorie ON item.id_categorie = categorie.id_categorie ');
 	$response->execute();
-	$articles = $response->fetchAll(PDO::FETCH_ASSOC);
+	$article = $response->fetchAll(PDO::FETCH_ASSOC);
 	$response->closeCursor();
-	return $articles;
+	return $article;
 }
 
 function updateArticle($oldtitle, $title, $price, $description) {

@@ -4,7 +4,7 @@ require_once('models/articles.php');
 if(empty($_POST)){
 $articleName = str_replace("-", " ", ARTICLE_REF);
 $articleTab =  getAllArticles(); // créé un tableau contenant un tableau avec les infos d'un article
-$article = $articleTab[0]; //extraction du tableau
+$article = $articleTab; //extraction du tableau
 }else{
 	if(empty($_POST['titre'])){
 		$titre = $_GET['titre'];
