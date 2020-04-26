@@ -18,8 +18,7 @@
 
 
 				<li><a href="<?=ROOT_PATH?>">Acceuil</a></li>
-				<li><a href="<?=ROOT_PATH?>article">Articles</a></li>
-				<li><a href="<?=ROOT_PATH?>">Infos</a></li>
+				<li><a href="<?=ROOT_PATH?>article">Info</a></li>
 				<li><a href="#contactanc">Contacts</a></li>
 
 
@@ -83,11 +82,8 @@
 			?>
 
 			<div id="banvert">
-				<?php echo $contenu ; ?>
-			</div>
-
-
-
+							<?php echo $contenu ; ?>
+						</div>
 			<div id="barresrouge">
 
 			</div>

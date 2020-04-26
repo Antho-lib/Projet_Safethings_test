@@ -11,7 +11,14 @@
               <div>
                     <img src="<?php echo ROOT_PATH.'img/articles_photo/'.$article['path']?>" alt="myPic" width='200' />
               </div>
-              <a href="<?=ROOT_PATH.'article/'.$article['titre']?>" class="btn btn-primary">Voir le détail</a>
+              <?php if($_SESSION['id_role']!=2):?>
+                <a href="<?=ROOT_PATH?>edit_articles" class="favorite styled" type="button" >Modifier l'article</a>
+              <?php else:?>
+                <a href="<?=ROOT_PATH.'article/'.$article['titre']?>" class="btn btn-primary">Voir le détail</a>
+                <br>
+                <?php endif?>
+
+
           </div>
         </div>
     <?php endforeach?>
