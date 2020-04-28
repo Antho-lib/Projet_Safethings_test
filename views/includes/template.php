@@ -1,134 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="">
-		<link rel="stylesheet" href="<?=ROOT_PATH?>Public/css/style.css" media="all">
-		<title>Safethings </title>
-	</head>
-	<body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Anthony Liberto">
 
+	<title>Safethings / Protections pour tout le monde.</title>
 
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
-		<header>
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="<?=ROOT_PATH?>public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?=ROOT_PATH?>public/css/font-awesome.min.css">
 
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="<?=ROOT_PATH?>public/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="<?=ROOT_PATH?>public/css/main.css">
 
-			<nav>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
 
+<body class="home">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="<?=ROOT_PATH?>"><img src="<?=ROOT_PATH?>public/images/logo.png" alt="Logo" width="80" height="80"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class="active"><a href="<?=ROOT_PATH?>">Acceuil</a></li>
+					<li><a href="<?=ROOT_PATH?>article">Nos articles</a></li>
+					<li><a href="<?=ROOT_PATH?>about">A propos </a>
 
-
-				<li><a href="<?=ROOT_PATH?>">Acceuil</a></li>
-				<li><a href="<?=ROOT_PATH?>article">Info</a></li>
-				<li><a href="#contactanc">Contacts</a></li>
-
-
-
-
-
-
-			</nav>
-
-		</header>
-
-
-
-
-
-		<main>
-			<div id="intro">
-				<img src="<?=ROOT_PATH?>img/fond/fnd3.jpg" alt="Banniere">
-				<div id="titre">
-					<?php echo $titre ; ?>
-					<?php if(empty($_SESSION['id']) || $_SESSION['id_role']!=1):?>
-						<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-						<?php else:?>
-					<li class="nav-item submenu dropdown">
-					<a href="#"   role="button" aria-haspopup="true"
-					aria-expanded="false">Administration</a>
-					<ul class="dropdown-menu">
-					<li class="nav-item"><a  href="<?=ROOT_PATH?>user_edit">Gestion membres</a></li>
-					<li class="nav-item"><a  href="<?=ROOT_PATH?>edit_books">Gestion commandes</a></li>
-					<li class="nav-item"><a  href="<?=ROOT_PATH?>edit_articles">Gestion shop</a></li>
-					</ul>
 					</li>
-				<?php endif?>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a class="btn" href="<?=ROOT_PATH?>inscription">Inscription</a></li>
+					<?php if(empty($_SESSION['user'])):?>
+          <li><a class="btn" href="<?=ROOT_PATH?>login">Connection</a></li>
+					<?php elseif($_SESSION['user']=="admin"):?>
+						<li><a class="btn" href="<?=ROOT_PATH?>admin">Administrateur</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>statistique">Statistique</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
+						<?php else:?>
+						<li><a class="btn" href="<?=ROOT_PATH?>shopping_cart">Shopping cart</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>commande">Commandes</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
+				</ul>
+				<span class="oi oi-aperture" title="icon name" aria-hidden="true" alt="connected"></span>
+            <?php endif?>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+
+        <?php
+            echo $content
+        ?>
+        <!-- Code test pour le bootstrap -->
+            <!-- <div class="card w-50 p-3">
+            <div class="card-body">
+                <h5 class="card-title">Hello world</h5>
+                <p class="card-text">Content</p>
+            </div> -->
+        <!--  -->
+        </div>
+
+        <section id="social">
+          <div class="container">
+            <div class="wrapper clearfix">
+              <!-- AddThis Button BEGIN -->
+              <div class="addthis_toolbox addthis_default_style">
+              <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+              <a class="addthis_button_tweet"></a>
+              <a class="addthis_button_linkedin_counter"></a>
+              <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+              </div>
+              <!-- AddThis Button END -->
+            </div>
+          </div>
+        </section>
+        <!-- /social links -->
 
 
-					<?php if(empty($_SESSION['id'])):?>
-					    	<a href="<?=ROOT_PATH?>signup" class="favorite styled" type="button" >S'inscrire</a>
-					    	<a href="<?=ROOT_PATH?>login"  class="favorite styled"  type="button" >Se connecter</a>
+        <footer id="footer" class="top-space">
 
-									<?php else:?>
-										<?php if($_SESSION['id_role']!=2):?>
-					  					<a href="<?=ROOT_PATH?>user_edit" class="favorite styled" type="button" >Administration</a>
-										<?php else:?>
-											<a href="<?=ROOT_PATH?>single_user" class="favorite styled" type="button" >Mon compte</a>
-											<?php endif?>
-					  					<a href="<?=ROOT_PATH?>logout" class="favorite styled"  type="button" >Se déconnecter</a>
-					<?php endif?>
+          <div class="footer1">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-3 widget">
+                  <h3 class="widget-title">Contact</h3>
+                  <div class="widget-body">
+                    <p>0492/89.72.34<br>
+                      <a href="mailto:#">vdw.anthonylib@gmail.com</a><br>
+                      <br>
+
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-3 widget">
+                  <h3 class="widget-title">Suivez nous !</h3>
+                  <div class="widget-body">
+                    <p class="follow-me-icons">
+                      <a href=""><i class="fa fa-twitter fa-2"></i></a>
+                      <a href=""><i class="fa fa-dribbble fa-2"></i></a>
+                      <a href=""><i class="fa fa-github fa-2"></i></a>
+                      <a href=""><i class="fa fa-facebook fa-2"></i></a>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 widget">
+                  <h3 class="widget-title">Informations utiles.</h3>
+                  <div class="widget-body">
+                    <p>Toute marchandise non conforme sera remboursée dans les plus brefs délais avec une réduction de 10% sur le prochain achat.</p>
+                    <p>Le bien être de nos clients passe avant tout.</p>
+                  </div>
+                </div>
+
+              </div> <!-- /row of widgets -->
+            </div>
+          </div>
+
+          <div class="footer2">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-6 widget">
+                  <div class="widget-body">
+                    <p class="simplenav">
+                      <a href="#">Acceuil</a> |
+                      <a href="about.html">A propos</a> |
+                      <a href="sidebar-right.html">Sidebar</a> |
+                      <a href="contact.html">Contact</a> |
+                      <b><a href="signup.html">Inscription</a></b>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 widget">
+                  <div class="widget-body">
+                    <p class="text-right">
+                      Copyright &copy; 2020, A.Liberto
+                    </p>
+                  </div>
+                </div>
+
+              </div> <!-- /row of widgets -->
+            </div>
+          </div>
+
+        </footer>
 
 
-				</div>
-			</div>
-
-			<?php
-			if(!empty($errorMessage)){
-				    include('error.php');
-				}
-				if(!empty($_SESSION['message'])){
-				    include('message.php');
-				    unset($_SESSION['message']);
-				}
-			?>
-
-			<div id="banvert">
-							<?php echo $contenu ; ?>
-						</div>
-			<div id="barresrouge">
-
-			</div>
 
 
 
+        <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
 
-			<div id="localisation">
-				<img src="<?=ROOT_PATH?>img/fond/fnd3.jpg" alt="Banniere localisation">
-				<div id="titrelocalisation">
-					<h2>Livraison partout dans le monde</h2>
-					<h3>Passez vos commandes 24h/24 7j/7</h3>
-
-				</div>
-			</div>
-
-
-
-			<div id="barresrougebas">
-				<img src="<?=ROOT_PATH?>img/fond/barres.png" alt="barres de séparation" id="barresbas">
-			</div>
-
-
-
-		</main>
-
-
-
-
-
-		<footer>
-<div id="contactanc"> </div>
-			<div class="contact"><b><h3>CONTACT</h3></b>
-				<h4>Mail:vdw.anthonylib@gmail.com </h4>
-				<h4>Tel:0492789234 </h4>
-
-			</div>
-
-
-			<br>
-			<div class="mention">
-				<p><h4><br>Conditions d'utilisation</h4></p>
-				<p><h4><br>Mentions légales</h4></p>
-				<p><h4><br>Politique de confidentialité</h4></p>
-			</div>
-		</footer>
-	</body>
-</html>
+      </body>
+      </html>

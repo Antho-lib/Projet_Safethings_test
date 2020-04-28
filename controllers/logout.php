@@ -1,5 +1,6 @@
 <?php
-session_unset();
-session_destroy();
-header("Location: ".ROOT_PATH);
+    session_destroy();
+    session_unset();
+    header("Location:".ROOT_PATH);
+    exit();
 ?>

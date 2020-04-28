@@ -1,2 +1,3 @@
-<?php include 'views/welcome.php';
+<?php
+include 'views/welcome.php';
 ?>
