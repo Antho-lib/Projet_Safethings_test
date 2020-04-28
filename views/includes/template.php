@@ -42,11 +42,12 @@
 
 					</li>
 					<li><a href="contact.html">Contact</a></li>
-					<li><a class="btn" href="<?=ROOT_PATH?>inscription">Inscription</a></li>
 					<?php if(empty($_SESSION['user'])):?>
+					<li><a class="btn" href="<?=ROOT_PATH?>inscription">Inscription</a></li>
+
           <li><a class="btn" href="<?=ROOT_PATH?>login">Connection</a></li>
 					<?php elseif($_SESSION['user']=="admin"):?>
-						<li><a class="btn" href="<?=ROOT_PATH?>admin">Administrateur</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>admin">Administration</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>statistique">Statistique</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
 						<?php else:?>

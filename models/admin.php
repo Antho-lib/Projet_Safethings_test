@@ -4,8 +4,8 @@ include 'models/config.php';
 // Connection DB.
 
     $sql_demande = "SELECT * FROM produit" ;
-    $gundam_querry = get_db()->query($sql_demande);
-    $list_data = $gundam_querry->fetchAll(PDO::FETCH_ASSOC);
+    $safethings_querry = get_db()->query($sql_demande);
+    $list_data = $safethings_querry->fetchAll(PDO::FETCH_ASSOC);
 
 // fonction pour derouler la liste des articles
 function all_items(){

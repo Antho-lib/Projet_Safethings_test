@@ -1,7 +1,16 @@
 <?php
     ob_start();
 ?>
+<header id="head">
+  <div class="container">
+    <div class="row">
+      <h1 class="lead">Articles</h1>
+      <p class="tagline">Voici toutes nos protections.<a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus"></a></p>
 
+    </div>
+  </div>
+</header>
+<?php print_r ($list) ?>
 <div class="jumbotron jumbotron-fluid" method="post" >
         <h1 class="display-4">Catalogue des produits</h1>
         <hr class="my-4">

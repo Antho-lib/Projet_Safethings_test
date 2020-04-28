@@ -1,6 +1,14 @@
 <?php
     ob_start();
 ?>
+<header id="head">
+  <div class="container">
+    <div class="row">
+      <h1 class="lead">Commandes</h1>
+      <p class="tagline">Voici l'état des commandes. <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus"></a></p>
+
+  </div>
+</header>
 
     <div class="card" style="width: 18rem;">
     <div class="card-body">
@@ -49,9 +57,9 @@
                 <tbody>
                     <?php foreach($item_commander as $k_item=>$list_item):?>
                         <tr>
-                            <td scope="row"><?=$list_item['nom_produit']?>€</td>
-                            <td scope="row"> <?=$list_item['ref']?></td>
-                            <td scope="row"> <?=$list_item['prix']?></td>
+                            <td scope="row"><?=$list_item['nom_produit']?> </td>
+                            <td scope="row"> <?=$list_item['ref']?> </td>
+                            <td scope="row"> <?=$list_item['prix']?>€</td>
                             <td scope="row"> <?=$list_item['quantite']?></td>
                             <td scope="row"> <?=$list_item['date_achat']?></td>
                         </tr>

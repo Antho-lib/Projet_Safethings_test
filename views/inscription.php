@@ -1,6 +1,15 @@
 <?php
     ob_start();
 ?>
+<header id="head">
+  <div class="container">
+    <div class="row">
+      <h1 class="lead">Safething</h1>
+      <p class="tagline">Merci de vouloir vous inscrire.<a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus"></a></p>
+      <p><a class="btn btn-default btn-lg" role="button" href="<?=ROOT_PATH?>login">Déjà inscrit ? Clique ici.</a></p>
+    </div>
+  </div>
+</header>
 <div class="jumbotron">
     <h1> Inscription </h1>
     <form method="POST" >

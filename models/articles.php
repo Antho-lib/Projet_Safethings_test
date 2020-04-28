@@ -6,9 +6,9 @@ include 'models/config.php';
 // Connection DB.
 
 $sql_demande = "SELECT * FROM produit" ;
-$gundam_querry = get_db()->query($sql_demande);
+$safethings_querry = get_db()->query($sql_demande);
 
-$list_data = $gundam_querry->fetchAll(PDO::FETCH_ASSOC);
+$list_data = $safethings_querry->fetchAll(PDO::FETCH_ASSOC);
 
 function all_items(){
     global $list_data;
@@ -19,8 +19,8 @@ function all_items(){
 
 function item($article){
     $sql_demande = "SELECT * FROM produit" ;
-    $gundam_querry = get_db()->query($sql_demande);
-    while($results = $gundam_querry->fetch(PDO::FETCH_ASSOC)){
+    $safethings_querry = get_db()->query($sql_demande);
+    while($results = $safethings_querry->fetch(PDO::FETCH_ASSOC)){
         if(strtolower($results['produit_name'])==strtolower($article)){
             return $results;
         }
