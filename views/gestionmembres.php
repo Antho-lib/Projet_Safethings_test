@@ -4,7 +4,7 @@
 <header id="head">
   <div class="container">
     <div class="row">
-      <h1 class="lead">Gestion des articles</h1>
+      <h1 class="lead">Gestion des membres</h1>
       <p class="tagline">Seul l'admin peut y avoir accès. <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus"></a></p>
 
     </div>
@@ -58,7 +58,14 @@ if(empty($_SESSION['user'])){
 </div>
 
 <!-- Page ajouter image -->
-
+<div class="jumbotron">
+    <h1 class="display-4">Image</h1>
+    <h2> Ajouter image.</h2>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="image" />
+            <input type="submit" name="upload_image" value="Upload" />
+        </form>
+</div>
 <div class="jumbotron">
 
 <!-- Supprimer -->
