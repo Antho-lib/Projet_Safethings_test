@@ -1,7 +1,15 @@
 <?php
     ob_start();
 ?>
+<header id="head">
+  <div class="container">
+    <div class="row">
+      <h1 class="lead">Gestion des articles</h1>
+      <p class="tagline">Seul l'admin peut y avoir accès. <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus"></a></p>
 
+    </div>
+  </div>
+</header>
 <?php
 if(empty($_SESSION['user'])){
         echo "Veuillez vous connecter";
@@ -44,6 +52,7 @@ if(empty($_SESSION['user'])){
             <label >Description</label>
             <input type="text" class="form-control" aria-describedby="Login_user" placeholder="Entrer la description" name="produit_description" >
         </div>
+        
         <button type="submit" class="btn btn-primary" name="add">Ajouter</button>
     </form>
 </div>

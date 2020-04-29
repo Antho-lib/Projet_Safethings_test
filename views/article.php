@@ -1,4 +1,5 @@
 <?php ob_start() ?>
+ <?php echo print_r($list) ?> 
 <header id="head">
   <div class="container">
     <div class="row">

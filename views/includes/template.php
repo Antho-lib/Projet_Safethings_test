@@ -48,6 +48,7 @@
           <li><a class="btn" href="<?=ROOT_PATH?>login">Connection</a></li>
 					<?php elseif($_SESSION['user']=="admin"):?>
 						<li><a class="btn" href="<?=ROOT_PATH?>admin">Administration</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>admin">Gestion des membres</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>statistique">Statistique</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
 						<?php else:?>
