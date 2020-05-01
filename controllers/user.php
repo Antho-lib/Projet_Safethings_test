@@ -1,7 +1,7 @@
 <?php
 
 require 'models/users.php';
-$article=REQ_TYPE_ID;
+$user=REQ_TYPE_ID;
 if(!REQ_TYPE_ID){
     $list = $list_data;
     include 'views/gestionmembres.php';

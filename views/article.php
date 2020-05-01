@@ -17,7 +17,7 @@
         <dt class="col-sm-2">Prix</dt>
         <dd class="col-sm-10"><?= $item['produit_price'].'€'?> </dd>
         <dt class="col-sm-2">Description</dt>
-        <dd class="col-sm-10"><?= $item['produit_name']?></dd>
+        <dd class="col-sm-10"><?= $item['produit_description']?></dd>
         <dt class="col-sm-2">Référence produit</dt>
         <dd class="col-sm-10"><?= $item['id_produit']?></dd>
         <dd class="col-sm-10"><img src="<?php echo ROOT_PATH.'images/'.$item['produit_image'] ?>" alt="myPic"  width="250" ></dd>

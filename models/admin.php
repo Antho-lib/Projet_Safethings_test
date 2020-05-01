@@ -47,8 +47,12 @@ function change_description($ref,$description){
     $search= get_db()->query($sql);
     $search->execute();
 }
-
-
+//supprimer tilisateur
+function delete_client($refclt){
+    $sql = "DELETE FROM client WHERE id_client=$refclt" ;
+    $search= get_db()->query($sql);
+    $search->execute();
+}
 // supprimer mon produit
 function delete_product($ref){
     $sql = "DELETE FROM produit WHERE id_produit=$ref" ;

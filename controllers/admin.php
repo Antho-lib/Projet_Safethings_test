@@ -11,30 +11,7 @@
         add_product($nom,$prix,$description);
     }
 
-    if(isset($_POST['upload_image'])){
-        // immage
-        $file = $_FILES['image'];
-        $fileName = $_FILES['image']['name'];
-        // temp location
-        $fileTmpName = $_FILES['image']['tmp_name'];
-        $fileSize = $_FILES['image']['size'];
-        $fileError = $_FILES['image']['error'];
-        $fileType = $_FILES['image']['type'];
-        $fileExt = explode('.',$fileName);
-        $fileActualExt = strtolower(end($fileExt));
-        // voir quel fichier autoriser
-        $allowed = array('jpg');
-        if(in_array($fileActualExt,$allowed)){
-            if($fileError === 0){
-                if($fileSize < 1000000){
-                    $fileNameNew =  $fileName;
-                    add_image($fileNameNew);
-                    $fileDestination = 'images/'.$fileNameNew;
-                    move_uploaded_file($fileTmpName,$fileDestination);
-                }
-            }
-        }
-    }
+
 
     if(isset($_POST['modifier_nom'])){
         if(isset($_POST['ref_nom'])){

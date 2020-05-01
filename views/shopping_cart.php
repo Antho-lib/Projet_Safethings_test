@@ -10,7 +10,7 @@
     </div>
   </div>
 </header>
-<?php print_r ($list) ?>
+
 <div class="jumbotron jumbotron-fluid" method="post" >
         <h1 class="display-4">Catalogue des produits</h1>
         <hr class="my-4">
