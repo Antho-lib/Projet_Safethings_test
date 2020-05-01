@@ -7,6 +7,14 @@ include 'models/config.php';
     $safethings_querry = get_db()->query($sql_demande);
     $list_data = $safethings_querry->fetchAll(PDO::FETCH_ASSOC);
 
+// fonction pour trouver un user avec son id
+function getUserById($id) {
+    $reponse = getDB()->prepare('SELECT * FROM client WHERE id_client = :id');
+    $reponse->execute([':id' => $id]);
+    $user = $reponse->fetch();
+    $reponse->closeCursor(); // Termine le traitement de la requête
+    return $user;
+}
 // fonction pour derouler la liste des articles
 function all_items(){
     global $list_data;

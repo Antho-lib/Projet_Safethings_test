@@ -52,7 +52,7 @@
 						<li><a class="btn" href="<?=ROOT_PATH?>statistique">Statistique</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
 						<?php else:?>
-						<li><a class="btn" href="<?=ROOT_PATH?>shopping_cart">Mon compte</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>membres">Mon compte</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>shopping_cart">E-shop</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>commande">Mes commandes</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>logout">Se deconnecter</a></li>
