@@ -48,13 +48,13 @@
           <li><a class="btn" href="<?=ROOT_PATH?>login">Connection</a></li>
 					<?php elseif($_SESSION['user']=="admin"):?>
 						<li><a class="btn" href="<?=ROOT_PATH?>admin">Administration</a></li>
-						<li><a class="btn" href="<?=ROOT_PATH?>gestionmembres">Gestion des membres</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>membres">Gestion des membres</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>statistique">Statistique</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
 						<?php else:?>
-						<li><a class="btn" href="<?=ROOT_PATH?>shopping_cart">Shopping cart</a></li>
-						<li><a class="btn" href="<?=ROOT_PATH?>commande">Commandes</a></li>
-						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>shopping_cart">E-shop</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>commande">Mes commandes</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>logout">Se deconnecter</a></li>
 				</ul>
 				<span class="oi oi-aperture" title="icon name" aria-hidden="true" alt="connected"></span>
             <?php endif?>

@@ -1,11 +1,11 @@
 <?php ob_start() ?>
- <?php echo print_r($list) ?> 
 <header id="head">
   <div class="container">
     <div class="row">
-      <h1 class="lead">Articles</h1>
-      <p class="tagline">Protections pour la vie de tout les jours et la vie professionnelle. <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus"></a></p>
-      <p><a class="btn btn-default btn-lg" role="button">En savoir plus ?</a> <a class="btn btn-action btn-lg" role="button">Voir nos articles</a></p>
+      <h1 class="lead">Cet article coute  <?= $item['produit_price'].'€'?>   pièce.</h1>
+      <br>
+      <p> <a class="btn btn-action btn-lg" role="button" href="<?=ROOT_PATH?>article">Retour sur le catalogue.</a></p>
+
     </div>
   </div>
 </header>
@@ -18,6 +18,8 @@
         <dd class="col-sm-10"><?= $item['produit_price'].'€'?> </dd>
         <dt class="col-sm-2">Description</dt>
         <dd class="col-sm-10"><?= $item['produit_name']?></dd>
+        <dt class="col-sm-2">Référence produit</dt>
+        <dd class="col-sm-10"><?= $item['id_produit']?></dd>
         <dd class="col-sm-10"><img src="<?php echo ROOT_PATH.'images/'.$item['produit_image'] ?>" alt="myPic"  width="250" ></dd>
     </dl>
 </div>

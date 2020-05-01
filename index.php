@@ -1,7 +1,7 @@
 <?php
 session_start(); // On démarre toujours la session
 define('ROOT_PATH', "/"); // Chemin qui suit le nom de domaine. Exemple: http://monprojet.local/09_mvc/ le path a indiqué sera donc '/09_mvc/'
-$request = str_replace(ROOT_PATH, "", $_SERVER['REQUEST_URI']); // On récupère juste la request, sans le chemin du dossier.
+$request = preg_replace("/".preg_quote(ROOT_PATH, '/')."/", "", $_SERVER['REQUEST_URI'], 1); // On récupère juste la request, sans le chemin du dossier.
 $segments = array_filter(explode('/', $request)); // On découpe la requête pour obtenir une liste et on supprime les éléments Null
 if (!count($segments) or $segments[0] == 'index'){
     $segments[0] = 'welcome';

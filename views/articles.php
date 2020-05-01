@@ -24,7 +24,7 @@
           </div>
         </div>
     <?php endforeach?>
-    </div>
+    
 <?php
 $title="Les articles";
 $content = ob_get_clean();

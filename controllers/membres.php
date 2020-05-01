@@ -21,11 +21,11 @@ function membres($user){
     $sql_demande = "SELECT * FROM produit" ;
     $safethings_querry = get_db()->query($sql_demande);
     while($results = $safethings_querry->fetch(PDO::FETCH_ASSOC)){
-        if(strtolower($results['produit_name'])==strtolower($user)){
+        if(strtolower($results['client_login'])==strtolower($user)){
             return $results;
         }
     }
 }
 
-
+include 'views/gestionmembres.php';
 ?>

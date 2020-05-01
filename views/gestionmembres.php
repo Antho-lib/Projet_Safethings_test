@@ -20,17 +20,18 @@ if(empty($_SESSION['user'])){
 ?>
 <div class="jumbotron">
     <h1 class="display-4">Liste</h1>
-    <?php foreach($list_produit as $article):?>
+    <?php foreach($list_data as $user):?>
+
             <div class="card text-center " >
             <div class="card-header">
-                <?=$article['produit_name']?>
+                <?=$user['client_login']?>
             </div>
             <div class="card-body">
-                <h5 class="card-title" name="ref" value="<?=$article['id_produit']?>">reference n°:<?=$article['id_produit']?></h5>
-                <h5 class="card-title"><?=$article['produit_price'].'€'?></h5>
-                <p class="card-text"><?=$article['produit_description']?></p>
+
+                <h5 class="card-title">Numéro d'identification : <?=$user['id_client']?></h5>
+                <p class="card-text"><?=$user['client_email']?></p>
                 <div>
-                    <img src="<?php echo ROOT_PATH.'images/'.$article['produit_image']?>" alt="myPic" width='200' />
+                    <img class="rounded-circle mx-auto d-block img-thumbnail" src="https://www.gravatar.com/avatar/" alt="" />
                 </div>
             </div>
     <?php endforeach?>
