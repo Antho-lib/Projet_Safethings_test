@@ -16,6 +16,11 @@
         $item_commander = get_articles($_SESSION['id']);
     }
 
+    if($_SESSION['user']=="admin"){
+      $all_cmd=get_all_commandes();
+      $all_prix=get_prix_tot();
+    };
+
 
     require 'views/commande.php';
 

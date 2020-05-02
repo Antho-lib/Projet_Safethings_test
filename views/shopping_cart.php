@@ -13,6 +13,7 @@
 
 <div class="jumbotron jumbotron-fluid" method="post" >
         <h1 class="display-4">Catalogue des produits</h1>
+        <h2>  <a href="#pannn" class="btn btn-default"> Mon panier</a> </h2>
         <hr class="my-4">
         <?php foreach($list as $article_shop):?>
             <form method="post">
@@ -45,7 +46,7 @@
 <!-- Panier -->
 <!--  -->
 <div class="jumbotron jumbotron-fluid">
-    <h1 >Shopping cart</h1>
+    <h1 id ="pannn" >Shopping cart</h1>
     <table cellpadding="10" cellspacing="1">
     <tbody>
         <tr>

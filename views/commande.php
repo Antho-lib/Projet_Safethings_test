@@ -9,7 +9,61 @@
 
   </div>
 </header>
+<?php if($_SESSION['user']=="admin"):?>
+  <h1 class="display-4">Historique des commandes</h1>
+  <!-- card pour commandes -->
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Commandes : </h5>
+          <table class="table table-striped">
+              <tr>
+                  <th scope="col"> Prix unitaire: </th>
+                  <th scope="col"> Identifiant de l'utilisateur: </th>
+                  <th scope="col"> Nom du produit </th>
+                  <th scope="col"> Quantité </th>
+                  <th scope="col"> Pseudo l'utilisateur: </th>
+                  <th scope="col"> Date: </th>
+              </tr>
+              <tbody>
+                  <?php foreach($all_cmd as $command):?>
+                      <tr>
+                          <td scope="row"><?=$command['prix']?>€</td>
+                          <td scope="row"><?=$command['id_client_item']?></td>
+                          <td scope="row"><?=$command['nom_produit']?></td>
+                          <td scope="row"><?=$command['quantite']?></td>
+                          <td scope="row"><?=$command['client_login']?></td>
+                          <td scope="row"> <?=$command['date_achat']?></td>
+                      </tr>
+                  <?php endforeach?>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Commandes regroupées : </h5>
+          <table class="table table-striped">
+              <tr>
+                  <th scope="col"> Total: </th>
+                  <th scope="col"> Identifiant de l'utilisateur: </th>
+                  <th scope="col"> Pseudo l'utilisateur: </th>
+                  <th scope="col"> Date: </th>
+              </tr>
+              <tbody>
+                  <?php foreach($all_prix as $command):?>
+                      <tr>
+                          <td scope="row"><?=$command['total']?>€</td>
+                          <td scope="row"><?=$command['id_c']?></td>
+                          <td scope="row"><?=$command['client_login']?></td>
+                          <td scope="row"> <?=$command['date_commande']?></td>
+                      </tr>
+                  <?php endforeach?>
+              </tbody>
+          </table>
+      </div>
+  </div>
 
+<?php else :?>
     <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Utilisateur</h5>
@@ -68,7 +122,7 @@
             </table>
         </div>
     </div>
-
+<?php endif ?>
 <?php
     $title = "shopping_cart";
     $content = ob_get_clean();

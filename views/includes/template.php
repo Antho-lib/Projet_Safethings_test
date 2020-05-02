@@ -50,6 +50,7 @@
 						<li><a class="btn" href="<?=ROOT_PATH?>admin">Administration</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>membres">Gestion des membres</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>statistique">Statistique</a></li>
+						<li><a class="btn" href="<?=ROOT_PATH?>commande">Commandes</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
 						<?php else:?>
 						<li><a class="btn" href="<?=ROOT_PATH?>membres">Mon compte</a></li>
