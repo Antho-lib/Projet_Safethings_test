@@ -6,7 +6,7 @@
     <div class="row">
       <h1 class="lead">Bienvenue chez Safethings</h1>
       <p class="tagline">Protections pour la vie de tout les jours et la vie professionnelle. <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus"></a></p>
-      <p><a class="btn btn-default btn-lg" role="button">En savoir plus ?</a> <a class="btn btn-action btn-lg" role="button">Voir nos articles</a></p>
+      <p><a class="btn btn-default btn-lg" role="button">En savoir plus ?</a> <a class="btn btn-action btn-lg" role="button"href="<?=ROOT_PATH?>article">Voir nos articles</a></p>
     </div>
   </div>
 </header>
@@ -38,25 +38,25 @@ Des secteurs d'activité sont traités en particulier: Services "INCENDIE"-"FORE
 
     <div class="row">
       <div class="col-md-3 col-sm-6 highlight">
-        <div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>Ne sortez plus de chez vous.</h4></div>
+        <div class="h-caption"> <img src="images/pouce.png" alt="" width="70"> <br> <h4>Ne sortez plus de chez vous.</h4></div>
         <div class="h-body text-center">
           <p>Grâce à notre système de commande vous pouvez vous proteger tout en restant chez vous.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 highlight">
-        <div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Large gamme.</h4></div>
+        <div class="h-caption"><h4><img src="images/pouce.png" alt="" width="70"><br> Large gamme.</h4></div>
         <div class="h-body text-center">
           <p>Une large et diverse gamme de produits vous est disponible.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 highlight">
-        <div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>La sécurité avant tout.</h4></div>
+        <div class="h-caption"><h4><img src="images/pouce.png" alt="" width="70"><br> La sécurité avant tout.</h4></div>
         <div class="h-body text-center">
           <p>La sécurité de tous reste une prioritée , surtout de nos jours.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 highlight">
-        <div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Support utilisateur.</h4></div>
+        <div class="h-caption"><h4><img src="images/pouce.png" alt="" width="70"><br> Support utilisateur.</h4></div>
         <div class="h-body text-center">
           <p>Vous serez entouré de notre équipe pour vous garantir la meilleur expérience possible. </p>
         </div>

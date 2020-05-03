@@ -41,7 +41,7 @@
 					<li><a href="<?=ROOT_PATH?>about">A propos </a>
 
 					</li>
-					<li><a href="contact.html">Contact</a></li>
+
 					<?php if(empty($_SESSION['user'])):?>
 					<li><a class="btn" href="<?=ROOT_PATH?>inscription">Inscription</a></li>
 
@@ -53,7 +53,6 @@
 						<li><a class="btn" href="<?=ROOT_PATH?>commande">Commandes</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>logout">Deconnection</a></li>
 						<?php else:?>
-						<li><a class="btn" href="<?=ROOT_PATH?>membres">Mon compte</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>shopping_cart">E-shop</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>commande">Mes commandes</a></li>
 						<li><a class="btn" href="<?=ROOT_PATH?>logout">Se deconnecter</a></li>
@@ -114,10 +113,8 @@
                   <h3 class="widget-title">Suivez nous !</h3>
                   <div class="widget-body">
                     <p class="follow-me-icons">
-                      <a href=""><i class="fa fa-twitter fa-2"></i></a>
-                      <a href=""><i class="fa fa-dribbble fa-2"></i></a>
-                      <a href=""><i class="fa fa-github fa-2"></i></a>
-                      <a href=""><i class="fa fa-facebook fa-2"></i></a>
+                      <a href=""><img src="images/twitter.png" alt="" width="30"></a>
+                      <a href=""><img src="images/facebook.png" alt="" width="30"></a>
                     </p>
                   </div>
                 </div>
@@ -130,7 +127,7 @@
                   </div>
                 </div>
 
-              </div> <!-- /row of widgets -->
+              </div>
             </div>
           </div>
 
@@ -139,15 +136,7 @@
               <div class="row">
 
                 <div class="col-md-6 widget">
-                  <div class="widget-body">
-                    <p class="simplenav">
-                      <a href="#">Acceuil</a> |
-                      <a href="about.html">A propos</a> |
-                      <a href="sidebar-right.html">Sidebar</a> |
-                      <a href="contact.html">Contact</a> |
-                      <b><a href="signup.html">Inscription</a></b>
-                    </p>
-                  </div>
+
                 </div>
 
                 <div class="col-md-6 widget">
@@ -158,17 +147,17 @@
                   </div>
                 </div>
 
-              </div> <!-- /row of widgets -->
+              </div>
             </div>
           </div>
-
+<a href="" title="compteur pour site"><img src="https://counter3.stat.ovh/private/compteurdevisite.php?c=6s6xfs3d8r3sz6t11d6tfypa6bdh6a2p" border="0" title="compteur pour site" alt="Nombre de visites"></a>
         </footer>
 
 
 
 
 
-        <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+
 
       </body>
       </html>

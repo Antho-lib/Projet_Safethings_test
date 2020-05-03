@@ -5,6 +5,9 @@
   <div class="container">
     <div class="row">
       <h1 class="lead">Gestion des articles</h1>
+      <h2>  <a href="#ajjj" class="btn btn-default"> Ajouter/supprimer un article</a> </h2>
+      <h2>  <a href="#moddd" class="btn btn-default"> Modifier un article</a> </h2>
+
       <p class="tagline">Seul l'admin peut y avoir accès. <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus"></a></p>
 
     </div>
@@ -38,7 +41,7 @@ if(empty($_SESSION['user'])){
 <!-- Editer un produit -->
 <div class="jumbotron">
 <h1 class="display-4">Ajout</h1>
-    <h2> Ajouter un nouveau produit.</h2>
+    <h2 id="ajjj"> Ajouter un nouveau produit.</h2>
     <form method="POST" >
         <div class="form-group">
             <label >Nom du produit</label>
@@ -57,13 +60,13 @@ if(empty($_SESSION['user'])){
     </form>
 </div>
 
-<!-- Page ajouter image -->
+
 
 <div class="jumbotron">
 
 <!-- Supprimer -->
 <h1 class="display-4">Supprimer</h1>
-    <h2> Supprimer un produit.</h2>
+    <h2 id="suppp"> Supprimer un produit.</h2>
     <form method="POST" >
         <div class="form-group">
             <label for="exampleInputLogin">Reference du produit a supprimer</label>
@@ -77,7 +80,7 @@ if(empty($_SESSION['user'])){
 <div class="jumbotron">
     <h1 class="display-4">Modifier</h1>
    <div class="jumbotron jumbotron-fluid">
-        <h2> Modifier le nom d'un produi</h2>
+        <h2 id="moddd"> Modifier le nom d'un produit</h2>
         <form method="POST" >
             <div class="form-group">
                 <label for="exampleInputLogin">Ref du produit</label>
