@@ -1,13 +1,13 @@
 /////SAFETHINGS\\\\\
-compte casual user -> login:antho pass:123
 
-
-
+Pour se connecter:
+compte casual user -> login:zzz pass:123   (ou alors vous pouvez vous inscire)
 
 compte admin -> login:admin pass:admin
 
+Le projet fonctionne avec la version 7.3.4 de php.
+J'ai utilisé Bootstrap pour rendre mon front-end responsive.
 
 
-(Ce site n'est pas encore totalement terminé)
 
-Mon problème est que je n'arrive pas à afficher mon "voir le détail" pour mes articles dans le but d'en afficher un seul.N'importe qu'elle personne pourra consulter ce détail.
+Créer une base de données MySQL ayant pour nom "safethings" et procéder au restore du dump du fichier safethings.sql accessible à la racine du répertoire.
